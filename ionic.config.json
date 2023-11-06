@@ -1,0 +1,7 @@
+{
+  "name": "MailEexercise",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
