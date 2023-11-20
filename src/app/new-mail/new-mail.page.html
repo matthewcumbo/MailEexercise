@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>New Mail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">New Mail</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <form [formGroup]="fg" (ngSubmit)="submitNewMail();">
+    <ion-list>
+      <ion-item>
+        <ion-label>Subject</ion-label>
+        <ion-input formControlName="subject"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>From</ion-label>
+        <ion-input formControlName="from"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>From Name</ion-label>
+        <ion-input formControlName="fromName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Message</ion-label>
+        <ion-input formControlName="message"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block" type="submit"> Send </ion-button>
+  </form>
+
+
+</ion-content>

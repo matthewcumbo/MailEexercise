@@ -350,6 +350,16 @@ export class MailApiService {
     this.emails.find(x => x.id == email).icon = status;
   }
 
-
+  newEmail(subject:string, from:string, fromName:string, message:string){
+  this.emails.push({
+    id:100,
+    subject:subject,
+    from:from,
+    fromName:fromName,
+    message:message,
+    status:0,
+    icon:0
+  });
+  }
 
 }
