@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'new-mail',
     loadChildren: () => import('./new-mail/new-mail.module').then( m => m.NewMailPageModule)
+  },
+  {
+    path: 'native',
+    loadChildren: () => import('./native/native.module').then( m => m.NativePageModule)
+  },
+  {
+    path: 'Spotify',
+    loadChildren: () => import('./spotify/spotify.module').then( m => m.SpotifyPageModule)
   }
 ];
 

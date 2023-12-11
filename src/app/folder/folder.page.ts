@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MailApiService } from '../services/mail-api.service';
-import { toLower } from 'ionicons/dist/types/components/icon/utils';
+// import { toLower } from 'ionicons/dist/types/components/icon/utils';
 
 @Component({
   selector: 'app-folder',
@@ -24,16 +24,16 @@ export class FolderPage implements OnInit {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
     this.statusList = this.mailApi.status;
     this.iconList = this.mailApi.icons;
-    this.emailList = this.mailApi.getEmails(this.folder.toLowerCase());
+    this.emailList = this.mailApi.getEmails(this.folder);
   }
 
   ngDoCheck(){
-    this.emailList = this.mailApi.getEmails(this.folder.toLowerCase());
+    this.emailList = this.mailApi.getEmails(this.folder);
   }
 
   setStatus(email:number, status:number){
     this.mailApi.setStatus(email, status);
-    this.emailList = this.mailApi.getEmails(this.folder.toLowerCase());
+    this.emailList = this.mailApi.getEmails(this.folder);
   }
 
   newMessage(){

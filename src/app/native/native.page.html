@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>native</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">native</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-button expand="block" (click)="toast('Hello World','bottom');">Toast</ion-button>
+  <ion-button expand="block" (click)="toast('Hiiiii','middle');">Toast 2</ion-button>
+  <ion-button expand="block" (click)="save();">Save</ion-button>
+  <ion-button expand="block" (click)="load();">Load</ion-button>
+
+<!-- 
+    Exercise: 
+      Create a service that adds/loads data to/from preferences
+      Add Unit Tests
+
+      Create a new form page
+      Upon submitting, save to preferences
+      Create a new page, on load, load from preferences
+      Show data using Ionic text components
+  -->
+
+
+
+</ion-content>
